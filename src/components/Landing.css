@@ -1,0 +1,23 @@
+.imagen{
+    max-width: 100%;
+    background-color: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin:  60px;
+    padding: 60px;
+  }
+
+  .Bienvenido{
+    font-size: 4rem;
+    color: rgb(255, 243, 243);
+    text-align: center;
+    font-style:oblique ;
+    font-weight: bold;
+    font-family: 'Crimson Text', serif;
+    margin:  60px;
+    padding: 60px;
+  }
+
+
+
