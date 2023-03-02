@@ -26,10 +26,10 @@ function App() {
 
   return (
     <div>
-      <Results results={results} />
+    
       <NavBar setSearch={setSearch} />
-      <Landing />
 
+      
      
       
    </div>

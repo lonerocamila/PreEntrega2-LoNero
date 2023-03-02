@@ -1,6 +1,4 @@
 import React from 'react'
-import getList from '../utils/getProducts'
-
 import { useState } from 'react';
 import ItemList from './ItemList';
 import Loader from './Loader';
@@ -8,6 +6,10 @@ import { json } from 'react-router-dom';
 
 const [arrayList,setArrayList] = useState([]);
 const [loading, setLoading] = useState (false);
+
+import React from 'react'
+
+const ItemsListContainer = () => {
 
 useEffect (()=>{
     setLoading(true);
@@ -32,6 +34,7 @@ return(
     
     </div>
 )
+}
 
 
 
