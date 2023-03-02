@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Products = () => {
- 
+
  [
     {
     id:1,
@@ -33,7 +33,8 @@ const Products = () => {
   {
    id:4,
    title:"Mens Casual Slim Fit",
-   description:"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing",
+   description:"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+   category:"men's clothing",
    image:"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
    rating:{rate:2.1, count:430}
    },
@@ -48,25 +49,28 @@ const Products = () => {
  {  id:6,
     title:"Solid Gold Petite Micropave ",
     price:168,
-    description:"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery",
+    description:"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+    category:"jewelery",
     image:"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     rating:{rate:3.9,count:70}}
  ]
+ 
 }
 
 const getList= () => {
     return new Promise((resolve, reject) => {
        setTimeout(() => {
-           resolve => (Products)
+           resolve  (Products)
        }, 2000);
     })
+    
 }
-const prod = () => {
-  return (
+const get = () => {
+      return (
     <div>
       
     </div>
   );
-}
+      }
 
 export default getList;

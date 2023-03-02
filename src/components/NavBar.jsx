@@ -3,6 +3,7 @@ import "./NavBar.css";
 import CartWidgets from './CartWidgets';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 const NavBar = (props) => {
   console.log(props);
@@ -31,7 +32,7 @@ const NavBar = (props) => {
     <div className='navbar'>
       <ul>
       <li>Inicio</li>
-      <li>Asesorias</li>
+      <Link exact>Productos</Link>
       <li>Grupos</li>
       <li>
         <form className='busqueda'>

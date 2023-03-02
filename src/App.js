@@ -24,11 +24,12 @@ function App() {
 
   return (
     <div>
-    
+    <BrowserRouter>
       <NavBar setSearch={setSearch} />
 
       <ItemsListContainer/>
-     
+        
+     </BrowserRouter>
       
    </div>
  
