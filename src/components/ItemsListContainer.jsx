@@ -1,7 +1,11 @@
 import React from 'react'
-import getList from './GetData';
-import data from './GetData';
+import getList from '../utils/getProducts'
 
+import { useState } from 'react';
+import ItemList from './ItemList';
+
+const [arrayList,setArrayList] = useState([]);
+    
 useEffect (()=>{
     getList()
     .then((response)=> setArrayList(response))
@@ -9,10 +13,19 @@ useEffect (()=>{
     .finally()
     
 },[])
-
+const prod = () => {
+    return (
+      <div>
+        
+      </div>
+    );
+  }
+  
+  
 return(
     <div className='listContainer'>
-
+        
+     <ItemList Products={arrayList} />  
     </div>
 )
 
