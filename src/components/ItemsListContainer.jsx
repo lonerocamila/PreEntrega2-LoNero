@@ -7,8 +7,6 @@ import { json } from 'react-router-dom';
 const [arrayList,setArrayList] = useState([]);
 const [loading, setLoading] = useState (false);
 
-import React from 'react'
-
 const ItemsListContainer = () => {
 
 useEffect (()=>{

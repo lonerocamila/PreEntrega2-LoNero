@@ -1,10 +1,8 @@
 import NavBar from "./components/NavBar";
-import axios from "axios"
-
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom"
-import Landing from "./components/Landing";
-import Results from "./components/Results";
+import Item from "./components/Item";
+import ItemsListContainer from "./components/ItemsListContainer";
 
 
 
@@ -29,7 +27,7 @@ function App() {
     
       <NavBar setSearch={setSearch} />
 
-      
+      <ItemsListContainer/>
      
       
    </div>
