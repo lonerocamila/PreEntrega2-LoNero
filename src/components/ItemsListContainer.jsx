@@ -3,29 +3,26 @@ import getList from '../utils/getProducts'
 
 import { useState } from 'react';
 import ItemList from './ItemList';
+import Loader from './Loader';
 
 const [arrayList,setArrayList] = useState([]);
-    
+const [loading, setLoading] = useState (false);
+
 useEffect (()=>{
+    setLoading(true);
     getList()
     .then((response)=> setArrayList(response))
     .catch((err)=> console.error())
-    .finally()
-    
+    .finally(()=> (setLoading(false)));   
 },[])
-const prod = () => {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
-  
   
 return(
     <div className='listContainer'>
-        
-     <ItemList Products={arrayList} />  
+     {/* Abro llaves para hablar en lenguaje js puro    */}
+    {
+        loading ? <Loader /> :   <ItemList Products={arrayList} /> 
+    }   
+    
     </div>
 )
 
