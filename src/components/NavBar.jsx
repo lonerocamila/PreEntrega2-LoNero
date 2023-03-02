@@ -2,8 +2,8 @@ import React from 'react'
 import "./NavBar.css";
 import CartWidgets from './CartWidgets';
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const NavBar = (props) => {
   console.log(props);
@@ -32,7 +32,7 @@ const NavBar = (props) => {
     <div className='navbar'>
       <ul>
       <li>Inicio</li>
-      <Link exact>Productos</Link>
+      <Link className='nav_link'>Productos</Link>
       <li>Grupos</li>
       <li>
         <form className='busqueda'>

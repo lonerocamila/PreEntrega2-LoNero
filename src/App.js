@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Item from "./components/Item";
 import ItemsListContainer from "./components/ItemsListContainer";
 
@@ -26,9 +26,14 @@ function App() {
     <div>
     <BrowserRouter>
       <NavBar setSearch={setSearch} />
+      
+      <Routes>
+      <Route path="/" element={ <ItemsListContainer/>} />
+       <Route path="/category" element={ <ItemsListContainer/>} />
+       <Route path="/CartWidgets" element={ <ItemsListContainer/>} />
+       <Route path="/details" element={ <ItemsListContainer/>} />
+    </Routes>
 
-      <ItemsListContainer/>
-        
      </BrowserRouter>
       
    </div>

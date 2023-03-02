@@ -1,7 +1,6 @@
-import React from 'react';
 
-const Products = () => {
 
+const Products = 
  [
     {
     id:1,
@@ -55,7 +54,7 @@ const Products = () => {
     rating:{rate:3.9,count:70}}
  ]
  
-}
+
 
 const getList= () => {
     return new Promise((resolve, reject) => {
@@ -65,12 +64,6 @@ const getList= () => {
     })
     
 }
-const get = () => {
-      return (
-    <div>
-      
-    </div>
-  );
-      }
+
 
 export default getList;
