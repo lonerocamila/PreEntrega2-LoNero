@@ -2,8 +2,11 @@ import React from 'react'
 import "./NavBar.css";
 import CartWidgets from './CartWidgets';
 import { useState } from 'react';
-import {NavLink} from 'react-router-dom';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Link, Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Checkout from './Checkout';
+import ItemsListContainer from './ItemsListContainer';
+
 
 const NavBar = (props) => {
   console.log(props);
@@ -28,19 +31,29 @@ const NavBar = (props) => {
 
     return (
 
-    <nav>
+    <nav >
     <div className='navbar'>
       <ul>
+  
+        <Routes>
+          <Route path='/' element={<ItemsListContainer/>}  />
+          <Route path='/category' element={<ItemsListContainer/>}  />
+          <Route path='/category/:id' element={<ItemsListContainer/>}  />
+          <Route path='/Cartwidgets' element={<CartWidgets/>}  />
+          <Route path='/details' element={<ItemDetailContainer/>}  />
+          <Route path='/item/:id' element={<ItemDetailContainer/>}  />
+          <Route path='/checkout' element={<Checkout/>}  />
+        </Routes>
+
       <li>Inicio</li>
-      <Link className='nav_link'>Productos</Link>
+      <Link className='nav_link' to='/'>Productos</Link>
       <li>Grupos</li>
       <li>
         <form className='busqueda'>
         <input type='text' placeholder='Buscar' style={{width:200, padding:5, margin:10}}/>
         <button className='buscar' type='submit' style={{width:100, padding:5, margin:10}}>Buscar</button>
-       
       </form>
-      </li>
+    </li>
      <div className='cart'>
      <li className='carrito'>
     <CartWidgets />

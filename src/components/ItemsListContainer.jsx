@@ -1,13 +1,15 @@
 import React from 'react'
+import Loader from './Loader'
 import { useState } from 'react';
+import getList from '../utils/getProducts';
 import ItemList from './ItemList';
-import Loader from './Loader';
-import { json } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const [arrayList,setArrayList] = useState([]);
-const [loading, setLoading] = useState (false);
+
 
 const ItemsListContainer = () => {
+const [arrayList,setArrayList] = useState([]);
+const [loading, setLoading] = useState (false);
 
 useEffect (()=>{
     setLoading(true);
@@ -25,10 +27,10 @@ useEffect (()=>{
  
 return(
     <div className='listContainer'>
-     {/* Abro llaves para hablar en lenguaje js puro    */}
+     {/* Abro llaves para hablar en lenguaje js puro   
     {
         loading ? <Loader /> :   <ItemList Products={arrayList} /> 
-    }   
+    }    */}
     
     </div>
 )

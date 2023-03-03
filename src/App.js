@@ -14,7 +14,7 @@ function App() {
 
   useEffect (()=> { 
     if (search != ""){
-   fetch(`https://fakestoreapi.com/products/1`)
+   fetch(`https://fakestoreapi.com/products`)
    .then((res) => res.json())
    .then ((data) => setResults(data))
     }
@@ -26,20 +26,18 @@ function App() {
     <div>
     <BrowserRouter>
       <NavBar setSearch={setSearch} />
-      
       <Routes>
       <Route path="/" element={ <ItemsListContainer/>} />
        <Route path="/category" element={ <ItemsListContainer/>} />
        <Route path="/CartWidgets" element={ <ItemsListContainer/>} />
        <Route path="/details" element={ <ItemsListContainer/>} />
     </Routes>
-
      </BrowserRouter>
       
    </div>
  
   );
 }
-export default App
+export default App;
 
 
