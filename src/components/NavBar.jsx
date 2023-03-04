@@ -13,7 +13,7 @@ const NavBar = (props) => {
   console.log(props);
   const [value, setValue] = useState('');
 
-    // funcion para controlar el envio de la barra de busqueda
+// funcion para controlar el envio de la barra de busqueda
     const handleSubmit = (e) => {
         e.preventDefault();
         //setear el value en el estado del search
@@ -36,29 +36,29 @@ const NavBar = (props) => {
     <div className='navbar'>
       <ul>
 
-
-      <Link className='link' to='/'>Inicio</Link>
-      <Link className='link' to='/ItemsListContainer'>Productos</Link>
-      <Link className='link' to='/getProducts'>Categorias</Link>
-      <li>
+        <li>
+      <Link className='link' to='/'><button>Inicio</button></Link>
+      <Link className='link' to='/ItemsListContainer'><button>Productos</button></Link>
+      <Link className='link' to='/getProducts'><button>Categorias</button></Link>
+      
         <form className='busqueda'>
         <input type='text' placeholder='Buscar' style={{width:200, padding:5, margin:10}}/>
         <button className='buscar' type='submit' style={{width:100, padding:5, margin:10}}>Buscar</button>
       </form>
-    </li>
-     <div className='cart'>
-     <Link to='/Cart' className='carrito'>
-    <CartWidgets />
-    </Link>
-    </div>
+       </li>
+      <div className='cart'>
+      <Link to='/Cart' className='carrito'>
+       <CartWidgets />
+      </Link>
+     </div>
        </ul>
      <div>
-      </div>
-      </div>
-      </nav>
+    </div>
+  </div>
+ </nav>
 
   
   )
 }
 
-export default NavBar
+export default NavBar; 
