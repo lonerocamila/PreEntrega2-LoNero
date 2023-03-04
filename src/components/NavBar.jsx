@@ -1,5 +1,6 @@
 import React from 'react'
 import "./NavBar.css";
+import Cart from './Cart';
 import CartWidgets from './CartWidgets';
 import { useState } from 'react';
 import { Link, Routes } from 'react-router-dom';
@@ -34,20 +35,11 @@ const NavBar = (props) => {
     <nav >
     <div className='navbar'>
       <ul>
-  
-        <Routes>
-          <Route path='/' element={<ItemsListContainer/>}  />
-          <Route path='/category' element={<ItemsListContainer/>}  />
-          <Route path='/category/:id' element={<ItemsListContainer/>}  />
-          <Route path='/Cartwidgets' element={<CartWidgets/>}  />
-          <Route path='/details' element={<ItemDetailContainer/>}  />
-          <Route path='/item/:id' element={<ItemDetailContainer/>}  />
-          <Route path='/checkout' element={<Checkout/>}  />
-        </Routes>
 
-      <li>Inicio</li>
-      <Link className='nav_link' to='/'>Productos</Link>
-      <li>Grupos</li>
+
+      <Link className='link' to='/'>Inicio</Link>
+      <Link className='link' to='/ItemsListContainer'>Productos</Link>
+      <Link className='link' to='/getProducts'>Categorias</Link>
       <li>
         <form className='busqueda'>
         <input type='text' placeholder='Buscar' style={{width:200, padding:5, margin:10}}/>
@@ -55,9 +47,9 @@ const NavBar = (props) => {
       </form>
     </li>
      <div className='cart'>
-     <li className='carrito'>
+     <Link to='/Cart' className='carrito'>
     <CartWidgets />
-    </li>
+    </Link>
     </div>
        </ul>
      <div>

@@ -10,6 +10,18 @@ import { useEffect } from 'react';
 const ItemsListContainer = () => {
 const [arrayList,setArrayList] = useState([]);
 const [loading, setLoading] = useState (false);
+const [isLoading, setIsLoading] = useState(true);
+
+useEffect(() => {
+    setIsLoading(true);
+    fetch(`https://fakestoreapi.com/products/`)
+      .then((response) => response.json())
+      .then((data) => {
+        setArrayList(data);
+        setIsLoading(false);
+      });
+  }, []);
+
 
 useEffect (()=>{
     setLoading(true);
@@ -18,7 +30,7 @@ useEffect (()=>{
     // .catch((err)=> console.error())
     // .finally(()=> (setLoading(false)));   
     fetch('https://fakestoreapi.com/products/1')
-    .then((res) => res.json)
+    .then((res) => res.json())
     .then ((data)=> setArrayList(data))
     .catch((err) => (setLoading(false)))
     .finally (()=> setLoading(false))
@@ -27,10 +39,10 @@ useEffect (()=>{
  
 return(
     <div className='listContainer'>
-     {/* Abro llaves para hablar en lenguaje js puro   
+      {/* Abro llaves para hablar en lenguaje js puro    
     {
         loading ? <Loader /> :   <ItemList Products={arrayList} /> 
-    }    */}
+    } */}
     
     </div>
 )

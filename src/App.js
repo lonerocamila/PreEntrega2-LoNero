@@ -1,9 +1,11 @@
 import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Item from "./components/Item";
 import ItemsListContainer from "./components/ItemsListContainer";
-
+// import Loader from "./components/Loader";
+import Checkout from './components/Checkout';
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import CartWidgets from './components/CartWidgets';
 
 
 
@@ -24,15 +26,51 @@ function App() {
 
   return (
     <div>
-    <BrowserRouter>
-      <NavBar setSearch={setSearch} />
+   
+       <BrowserRouter>
+        <NavBar setSearch={setSearch} />
       <Routes>
-      <Route path="/" element={ <ItemsListContainer/>} />
-       <Route path="/category" element={ <ItemsListContainer/>} />
-       <Route path="/CartWidgets" element={ <ItemsListContainer/>} />
-       <Route path="/details" element={ <ItemsListContainer/>} />
+          <Route
+            path='/' 
+             element={
+              <ItemsListContainer greeting="Listado de todos los productos"/>
+             }  
+             />
+          <Route 
+            path='/category/:id' 
+            element={
+            <ItemsListContainer/>
+            }  
+          />
+            <Route 
+              path="/item/:id" 
+                element={<ItemDetailContainer />
+                }
+             />
+             <Route 
+               path="/checkout" 
+               element={
+               <Checkout />
+               } 
+              />
+          <Route 
+             path='/Cartwidgets' 
+             element={
+             <CartWidgets/>
+             }  
+          />
+
+         
+
+          
     </Routes>
      </BrowserRouter>
+
+     {/* <div className="container">
+      <Loader />
+      </div>
+      */}
+      
       
    </div>
  
