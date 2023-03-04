@@ -15,7 +15,7 @@ function App() {
 
 
   useEffect (()=> { 
-    if (search != ""){
+    if (search !== ""){
    fetch(`https://fakestoreapi.com/products`)
    .then((res) => res.json())
    .then ((data) => setResults(data))
@@ -70,7 +70,8 @@ function App() {
       <Loader />
       </div>
       */}
-      
+      <ItemsListContainer/>
+      <ItemDetailContainer/>
       
    </div>
  
