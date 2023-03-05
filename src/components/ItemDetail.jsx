@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './ItemDetail.css'
 import Products from '../utils/getProducts';
 
 const ItemDetail = ({item}) => {

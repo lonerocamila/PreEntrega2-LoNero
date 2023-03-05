@@ -6,6 +6,7 @@ import ItemsListContainer from "./components/ItemsListContainer";
 import Checkout from './components/Checkout';
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartWidgets from './components/CartWidgets';
+import './components/App.css'
 
 
 
